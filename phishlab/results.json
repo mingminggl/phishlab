@@ -1,0 +1,5 @@
+{"text": "Click here to verify your account and avoid suspension: http://fakebank.com/login", "detections": {"phishing": true, "impersonation": false, "ai_signature": false}, "risk_score": 0.4, "suggested_action": "no_action", "id": "msg_001"}
+{"text": "You've won a free iPhone! Act now to claim your prize.", "detections": {"phishing": true, "impersonation": false, "ai_signature": false}, "risk_score": 0.4, "suggested_action": "no_action", "id": "msg_002"}
+{"text": "Your account has been locked. Login immediately to resolve the issue.", "detections": {"phishing": true, "impersonation": false, "ai_signature": false}, "risk_score": 0.4, "suggested_action": "no_action", "id": "msg_003"}
+{"text": "URGENT: We noticed unusual activity on your account. Confirm your identity here: http://phishingsite.com", "detections": {"phishing": false, "impersonation": false, "ai_signature": false}, "risk_score": 0.0, "suggested_action": "no_action", "id": "msg_004"}
+{"text": "Reset your password now to avoid account deactivation.", "detections": {"phishing": true, "impersonation": false, "ai_signature": false}, "risk_score": 0.4, "suggested_action": "no_action", "id": "msg_005"}
