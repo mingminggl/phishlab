@@ -1,16 +1,18 @@
-from app.detectors.phishing import detect_phishing
+from app.detectors.phishing import ImprovedPhishingDetector
 from app.detectors.impersonation import detect_impersonation
 from app.detectors.ai_signatures import detect_ai_signature
 from app.scorer import calculate_risk_score
+
+phishing_detector = ImprovedPhishingDetector()
 
 def run_detection_pipeline(text):
     """
     Run the full detection pipeline on a single text message.
     Returns a dictionary containing detection results and risk score.
     """
-    phishing_flag = detect_phishing(text)
+    phishing_flag = phishing_detector.predict(text)['is_phishing']
     impersonation_flag = detect_impersonation(text)
-    ai_signature_flag = detect_ai_signature(text)  # Optional
+    ai_signature_flag = detect_ai_signature(text)
 
     detections = {
         "phishing": phishing_flag,

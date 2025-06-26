@@ -3,9 +3,9 @@ def calculate_risk_score(detections):
     Assigns a weighted risk score based on triggered flags.
     """
     weights = {
-        "phishing": 0.4,
-        "impersonation": 0.5,
-        "ai_signature": 0.2  # Optional, small weight
+        "phishing": 0.8,
+        "impersonation": 0.2,
+        "ai_signature": 0.0
     }
 
     score = 0.0

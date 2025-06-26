@@ -22,6 +22,7 @@ from sklearn.metrics import (
 )
 import sys
 import os
+from tqdm import tqdm
 
 # Add project root to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -50,7 +51,7 @@ def main():
 
     y_true, y_pred, y_scores = [], [], []
 
-    for _, row in df.iterrows():
+    for _, row in tqdm(df.iterrows(), total=len(df), desc="Evaluating samples"):  # Add tqdm here
         result = run_detection_pipeline(row["text"])
         # --- Prediction logic -------------------------------------------
         if args.threshold is None:
