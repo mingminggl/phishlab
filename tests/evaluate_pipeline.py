@@ -85,6 +85,16 @@ def main():
         # ROC curve display
         RocCurveDisplay.from_predictions(y_true, y_scores).figure_.show()
 
+    #     # Print test cases for false positives
+    # print("\n=== False Positives (Legitimate flagged as Phishing) ===")
+    # for idx, (true, pred) in enumerate(zip(y_true, y_pred)):
+    #     if true == 0 and pred == 1:
+    #         row = df.iloc[idx]
+    #         print(f"\nID: {row['id']}")
+    #         print(f"Text: {row['text'][:500]}{'...' if len(row['text']) > 500 else ''}")
+    #         print(f"Label: {row['label']}")
+    #         print(f"Predicted: phishing")
+    #         print(f"Risk Score: {y_scores[idx]:.3f}")
 
 if __name__ == "__main__":
     main()

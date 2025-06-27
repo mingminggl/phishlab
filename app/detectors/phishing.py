@@ -458,7 +458,7 @@ class ImprovedPhishingDetector:
             logger.warning(f"Error in ML prediction: {e}")
             return "NEUTRAL", 0.5
 
-    def predict(self, text: str, rule_threshold: float = 8.0, ml_threshold: float = 0.98) -> Dict:
+    def predict(self, text: str, rule_threshold: float = 12.0, ml_threshold: float = 0.98) -> Dict:
         """
         Main prediction function with optimized ensemble approach
         """
